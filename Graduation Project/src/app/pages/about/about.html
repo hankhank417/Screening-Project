@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>About</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="presentPopover($event)">
+        <ion-icon slot="icon-only" name="more"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="about-header">
+    <img src="assets/img/appicon.svg" alt="ionic logo">
+  </div>
+  <div class="about-info">
+    <h4 class="ion-padding-start">Ionic Conference</h4>
+
+    <ion-list lines="none">
+      <ion-item>
+        <ion-icon name="calendar" slot="start"></ion-icon>
+        <ion-label position="stacked">Date</ion-label>
+        <ion-datetime displayFormat="MMM DD, YYYY" max="2099" min="1911" [(ngModel)]="conferenceDate"></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="pin" slot="start"></ion-icon>
+        <ion-label position="stacked">Location</ion-label>
+        <ion-select>
+          <ion-select-option value="taipei" selected>Taipei, TW</ion-select-option>
+          <ion-select-option value="taichung">Taichung, TW</ion-select-option>
+          <ion-select-option value="kaohsiung">Kaohsiung, TW</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+
+    <p class="ion-padding-start ion-padding-end">
+        結構行為合一 (Structure-Behavior Coalescence，簡稱為 SBC) 講求系統結構和系統行為的整合，我們借用它來改善系統學 1.0 的系統定義內涵，
+        如此可以將系統學 1.0 進步到系統學 2.0 (系統學 2.0 又稱為架構學)。系統學 2.0 (架構學) 定義系統為一群彼此之間還有與外界環境會產生互動的
+        構件，並且遵行「結構行為合一」要求，所組合而成的整合性全體。系統學 2.0 (架構學) 使用(A)SBC進程代數 (SBC Process Algebra，簡稱為 SBC-PA)
+        ，或者(B)SBC架構描述語言 (SBC Architecture Description Language，簡稱為 SBC-ADL) 來完成系統的定義。
+    </p>
+  </div>
+</ion-content>

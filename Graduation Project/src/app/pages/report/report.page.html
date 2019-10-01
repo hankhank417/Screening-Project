@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">　　
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>report</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="item" class="list-mini-content" padding>
+    
+<form class="form" [formGroup]="validations_form" (ngSubmit)="tryReport(validations_form.value)">
+
+    <ion-item>
+        <ion-label position="floating" color="primary">事件地點</ion-label>
+        
+        <ion-input type="text" formControlName="event_location" placeholder="請設置圖標至事故發生地點自動取得座標" *ngIf='mark_lat' value="{{mark_lat}},{{mark_lng}}"></ion-input>
+    </ion-item>
+
+    <div #mapCanvas id="mapCanvas"></div>
+
+    <ion-item>
+        <ion-label position="floating" color="primary">事件概述</ion-label>
+        <ion-input type="textarea" formControlName="event_description"></ion-input>
+    </ion-item>
+
+    <p></p>
+    <p></p>
+
+<ion-button class="submit-btn" expand="block" type="submit" [disabled]="!validations_form.valid">回報</ion-button>
+<p></p>
+<p></p>
+<ion-button expand="block" [routerLink]="['/schedule']">取消</ion-button>
+
+
+
+
+</form>
+
+
+
+  </ion-content>

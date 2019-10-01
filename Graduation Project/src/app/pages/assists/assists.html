@@ -1,0 +1,48 @@
+<!-- <script src="http://maps.google.com/maps/api/js?key=AIzaSyAN4WtYJaHmnvPBEqCzj2B1W7LrgCcgHf8&libraries=places"></script> -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Assists</ion-title>
+    <ion-buttons slot="end">
+      <!-- <ion-button (click)="presentFilter()">
+        <ion-icon slot="icon-only" name="settings"></ion-icon>
+      </ion-button> -->
+      <ion-button (click)="presentFilter()">
+        <ion-icon slot="icon-only" name="settings"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- <div #assistsCanvas class="assists-canvas"></div> -->
+  <ion-toolbar>
+      <ion-searchbar [(ngModel)]="address" (setAddress)="getAddress($event)" id="txtHome"></ion-searchbar>
+      <!-- <ion-button (click)="calculateAndDisplayRoute()">Get Direction</ion-button>
+      <ion-button (click)="findNearby()" id="a">Get Direction</ion-button> -->
+
+      <div id="select">
+        <ul class="list">
+          <li class="item">
+            <ion-button *ngFor="let item of items" (click)="btnSearch(item.value)" id="locationBtn" size="small" color="light" fill="outline" class="round">{{item.title}}</ion-button>
+          </li>
+        </ul>
+      </div>
+        <!-- <ion-list>
+          <ion-item-sliding *ngFor="let item of items" style="width: 99%">
+            <ion-item style="width: 97%">
+              {{item.title}}
+            </ion-item>
+            <ion-item-options>
+                <button danger (click)="removeItem(item)" style="color:white; background-color: red; width: 20%;"><ion-icon slot="icon-only" name="trash"></ion-icon>Delete</button>
+            </ion-item-options>
+          </ion-item-sliding>
+         
+        </ion-list> -->
+      </ion-toolbar>
+  <div #map id="map" style="width: 100%; height: 83%;"></div>
+  
+</ion-content>
+<!-- routerLink="/app/tabs/assists/assists/{{item.title}}" -->

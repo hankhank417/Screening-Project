@@ -1,0 +1,5 @@
+Bus
+MRT
+THSR
+Air ticket
+Parking fee

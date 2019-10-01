@@ -1,0 +1,106 @@
+ion-toolbar {
+  // TODO test transparent and fullscreen
+  --background: transparent;
+  --border-color: transparent;
+}
+
+.swiper-slide {
+  display: block;
+  
+}
+
+.slide-title {
+  margin-top: 2.8rem;
+  font-family: '微軟正黑體'; 
+  font-weight:bold; 
+}
+
+.start-image {
+  max-height: 300%;
+  height: 600px;
+  // height: 40%;
+  // width: 40%;
+  // padding-top: 50%;
+  // padding-bottom: 50%;
+
+}
+
+.start-image-div{  
+  max-height: 100%;
+}
+
+.slide-image {
+  max-height: 50%;
+  max-width: 60%;
+  margin: 36px 0;
+}
+
+//button-setting
+.start-button {
+  width:120px;
+  height:40px;
+  border:3px orange;
+  color: #fff;
+  background-color: orange;
+
+  padding: 7px 14px;
+  border: 1px solid  #fff;
+  background: -webkit-gradient(linear, left top, left bottom, from(#C9832F), to(#FF7300));
+  background: -webkit-linear-gradient(top, #C9832F, #FF7300);
+  background: -moz-linear-gradient(top, #C9832F, #FF7300);
+  background: -ms-linear-gradient(top, #C9832F, #FF7300);
+  background: -o-linear-gradient(top, #C9832F, #FF7300);
+  background-color: #FF7300;
+  box-shadow: 0px 7px 2px -5px #7A6D6D, inset 0px 0px 3px #9C0000;
+  -webkit-box-shadow: 0px 7px 2px -5px #7A6D6D, inset 0px 0px 3px #9C0000;
+  -moz-box-shadow: 0px 7px 2px -5px #7A6D6D, inset 0px 0px 3px #9C0000;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  text-shadow: #FF7A7A 1px 1px 0px;
+  color: #FFFFFF;
+  font-size: 20px;
+  font-family: '微軟正黑體';
+  text-decoration: none;
+  font-weight: bold;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -o-transition: 0.2s;
+  cursor: pointer;
+  }
+
+.start-button:hover {
+  background: none;
+  background-color: #FF7300;
+  box-shadow: 0px 0px 5px 0px #AAAAAA;
+  -webkit-box-shadow: 0px 0px 5px 0px #AAAAAA;
+  -moz-box-shadow: 0px 0px 5px 0px #AAAAAA;
+  border: 1px solid #ffffff;
+  color: #470000;
+  }
+.start-button:active {
+  top: 1px;
+  position: relative;
+  }
+
+.p-content{
+  font-size: 19px;  
+  font-family: '微軟正黑體';  
+}
+
+b {
+  font-weight: 500;
+}
+
+p {
+  padding: 0 40px;
+  font-size: 20px;
+  font-family: '微軟正黑體';
+  line-height: 1.5;
+  color: #60646b;
+
+  b {
+    color: #000000;
+  }
+}
+

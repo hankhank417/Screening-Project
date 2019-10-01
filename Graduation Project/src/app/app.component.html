@@ -1,0 +1,92 @@
+<ion-app>
+  <ion-split-pane>
+
+    <ion-menu>
+      <ion-header>
+        <ion-toolbar color="primary">
+          <ion-title>Menu</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+ 
+
+        <ion-list>
+          <ion-list-header>
+            Account
+          </ion-list-header>
+
+          <ion-menu-toggle autoHide="false">
+            <ion-item button (click)="openAccount()">
+              <ion-icon slot="start" name="person" style="color: grey"></ion-icon>
+              <ion-label style="color:grey">
+                個人資訊
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-menu-toggle autoHide="false">
+            <ion-item button (click)="logout()">
+              <ion-icon slot="start" name="log-out" style="color: grey"></ion-icon>
+              <ion-label style="color:grey">
+                登出
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+        </ion-list>
+        
+        <ion-list>
+          <ion-list-header>
+            Navigate
+          </ion-list-header>
+
+          <ion-menu-toggle autoHide="false" *ngFor="let p of appPages; let i = index">
+            <ion-item [routerLink]="p.url" routerLinkActive="active" routerDirection="root">
+              <ion-icon slot="start" [name]="p.icon" style="color: grey"></ion-icon>
+              <ion-label style="color:grey">
+                {{p.title}}
+              </ion-label>
+            </ion-item>
+
+          </ion-menu-toggle>
+        </ion-list>
+
+        <ion-list>
+          <ion-list-header>
+            Others
+          </ion-list-header>
+
+          <ion-menu-toggle autoHide="false">
+            <ion-item button (click)="openAbout()">
+              <ion-icon slot="start" name="information-circle"></ion-icon>
+              <ion-label style="color:grey">關於我們</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-menu-toggle autoHide="false">
+            <ion-item button (click)="openPrivacy()">
+              <ion-icon slot="start" name="lock"></ion-icon>
+              <ion-label style="color:grey">
+                帳號及隱私權
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-menu-toggle autoHide="false">
+            <ion-item button (click)="openSetting()">
+              <ion-icon slot="start" name="settings"></ion-icon>
+              <ion-label style="color:grey">
+                設定
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+
+    <ion-router-outlet main></ion-router-outlet>
+
+  </ion-split-pane>
+
+</ion-app>

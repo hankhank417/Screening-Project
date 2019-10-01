@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">　　
+        <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>設定</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+  <ion-icon name="git-network"></ion-icon>&nbsp;&nbsp;    
+  多路線選擇
+  <ion-toggle slot="end" [(ngModel)]='Route_isToggled' (ionChange)='togglechanged()' ng-checked='Route_isToggled'></ion-toggle><br>  
+  </ion-item>
+
+  <ion-item>
+  <ion-icon name="logo-model-s"></ion-icon>&nbsp;&nbsp;  
+  避開高速公路
+  <ion-toggle slot="end" [(ngModel)]='Highway_isToggled' (ionChange)='togglechanged()' ng-checked='Highway_isToggled' ></ion-toggle><br>
+  </ion-item>
+
+  <ion-item>
+  <ion-icon name="card"></ion-icon>&nbsp;&nbsp;  
+  避開收費站
+  <ion-toggle slot="end"  [(ngModel)]='Toll_isToggled' (ionChange)='togglechanged()' ng-checked='Toll_isToggled'></ion-toggle><br>
+  </ion-item>
+</ion-content>

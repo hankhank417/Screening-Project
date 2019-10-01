@@ -1,0 +1,33 @@
+-----20170601-----
+1Breakfast $50
+1Dinner $40
+-----20170602-----
+1Breakfast $80
+1Late-night supper $65
+2Black tea $30
+2Juice $50
+-----20170603-----
+1Lunch $75
+1apple $140
+2Coffee $40
+-----20170604-----
+1Lunch $75
+2Soy milk $30
+5KTV $349
+-----20170605-----
+1Late-night supper $60
+1apple $10
+-----20170611-----
+1Breakfast $150
+1Dinner $50
+1Late-night supper $100
+5KTV $350
+9Winning invoice $200
+-----20170612-----
+1Breakfast $60
+2Soy milk $199
+0ticket $300
+2Coffee $40
+4shoes $3000
+-----20170619-----
+1Breakfast $100

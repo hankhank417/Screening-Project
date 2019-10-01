@@ -1,0 +1,12 @@
+.flex {
+    height: 500px;
+    width: 280px;
+    //background-color:#2435;
+ 
+    position: absolute;     /*絕對位置*/
+    top: 50%;               /*從上面開始算，下推 50% (一半) 的位置*/
+    left: 50%;              /*從左邊開始算，右推 50% (一半) 的位置*/
+    margin-top: -250px;     /*高度的一半*/
+    margin-left: -140px;    /*寬度的一半*/
+ 
+}

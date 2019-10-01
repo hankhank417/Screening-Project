@@ -1,0 +1,51 @@
+ion-title,ion-content{
+    font-family: '微軟正黑體'; 
+}
+
+ion-content{
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+ion-item{
+    margin: 10px;
+}
+
+.outer{
+    border-width:3px;
+    border-style:dashed;
+    border-color:#FFAC55;
+
+    padding:5px;
+    margin:0px auto;
+     top:10%; left:5%;
+     position:absolute;
+     height: 90%  ;    
+     width: 90%;
+     text-align:center;
+}
+
+.icon{
+     border-width:3px;
+    background-color: rgb(85, 255, 241);
+
+    margin:15px auto;
+    height: 30%;   
+    width: 90%;
+    text-align:center;
+    position:relative;
+}
+
+.inner{
+    border-width:3px;
+    background-color: gray;
+
+    padding:5px;
+    margin:10px auto;
+    text-align:center;
+    height: 60%;
+    width: 90%;
+}
+
+

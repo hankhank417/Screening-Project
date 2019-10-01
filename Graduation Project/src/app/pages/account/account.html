@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">　　
+        <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>個人資訊</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="outer-content">
+  <!-- <div *ngIf="username" class="ion-padding-top ion-text-center"> -->
+  <div  class="ion-padding-top ion-text-center">
+    <div class="profile-img">
+        <img *ngIf="!item.image" src="assets/img/user.png" alt="avatar" (click)="updatePicture()">
+        <img *ngIf="item.image" [src]="item.image" (click)="updatePicture()" >
+      </div>
+
+    <!-- changeEmail()、changePhone() 還沒有定義-->
+    <!-- 不確定changeUsername()要不要刪掉-->
+
+     <ion-list >
+       <!--Basic: auto-select the icon based on the platform -->
+       <ion-item class="info-title">
+          <ion-icon name="ios-key" item-left></ion-icon>　帳號
+          <i class="icon ion-home"></i>
+      </ion-item>
+       
+      <ion-item (click)="changeUsername()">
+          <div class="item-content">
+              <div class="left">　名稱</div>
+              <div class="right">{{item.Name}}</div>
+          </div>
+      </ion-item>
+      
+      <ion-item (click)="changeEmail()">
+          <div class="item-content">
+              <div class="left">　電子郵件</div>
+              <div class="right">{{item.Email}}</div>
+          </div>
+      </ion-item>
+      
+
+      <ion-item *ngIf="item.Phone" (click)="changePhone()">
+          <div class="item-content">
+              <div class="left">　電話號碼</div>
+              <div class="right">{{item.Phone}}</div>
+          </div>
+      </ion-item>
+      
+      <ion-item (click)="changePassword()">
+          <div class="item-content">
+              <div class="left">　密碼</div>
+              <div class="right">{{item.Password}}</div>
+          </div> 
+      </ion-item>
+
+      <ion-item class="info-title" ><ion-icon name="md-exit" item-left></ion-icon>　登出</ion-item>
+      <ion-item (click)="logout()" class="item-content">　登出</ion-item>
+      
+    </ion-list>
+  </div>
+ 
+</ion-content>

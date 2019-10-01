@@ -1,0 +1,87 @@
+ion-title,ion-content,.words,.words{
+    font-family: '微軟正黑體'; 
+}
+
+.words{
+    white-space:pre-wrap;
+    padding: 5px;
+    align-items: center;
+    justify-content:  center;
+    background-color: green;
+}
+
+.button{
+    font-family: '微軟正黑體'; 
+    float:center ;
+    bottom:5px;
+}
+
+////////////////////////////
+
+ion-card{
+    height: 360px;
+    width: 99%;
+    
+}
+
+ion-title,ion-content{
+    font-family: '微軟正黑體'; 
+}
+
+ion-content{
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    }
+
+ion-textarea{
+    height: 200px;
+    background-color: rgb(234, 237, 240);
+    border-radius:10px;
+    text-indent: 5px;
+
+}
+
+ion-label{
+    font: 14px;
+}
+.outer{
+    // border-width:3px;
+    // border-style:dashed;
+    // border-color:#FFAC55;
+    padding:5px;
+    margin:0px auto;
+    top:10%; 
+    left:5%;
+    position:absolute;
+    height: 80%;    
+    width: 90%;
+    text-align:left;
+}
+
+.icon{
+    // border-width:3px;
+    // background-color: #FFAC55;
+    margin:0px 0px 30px 40px;
+    height: 15%;   
+    width: 90%;
+    text-align:left;
+    position:relative;
+}
+
+
+.inner{
+    // border-width:3px;
+    // background-color: gray;
+    padding:5px;
+    margin:10px auto;
+    text-align:center;
+    height: 60%;
+    width: 90%;
+}
+
+.mail-content{
+    // max-height: 100%; 
+    height: 50%;
+    }
+

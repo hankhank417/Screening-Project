@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-button [routerLink]="['/record']">
+            <ion-icon slot="icon-only" name="md-arrow-back"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+    <ion-title>record-detail</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h1 style="text-align: center">報案詳細記錄</h1>
+  <div class="flex">
+
+    <br><p style="margin-left:13%;  ">
+      1. &nbsp;報案人姓名：{{item.Reporter_Name}}<br><br>
+      2. &nbsp;報案人電話：{{item.Reporter_Phone}}<br><br>
+      3. &nbsp;報案時間：{{item.Report_Date}}-{{item.Report_Time}}<br><br>
+      4. &nbsp;事發地點：{{item.Event_location}}<br><br>
+      5. &nbsp;事發描述：{{item.Event_description}}
+    </p>
+    <br>處理進度:<p *ngIf='value == 0'>未處理</p><p *ngIf='value == 0.5'>處理中</p><p *ngIf='value == 1'>處理完畢</p><br>
+    <p>
+      <ion-progress-bar value={{value}}></ion-progress-bar>
+    </p>
+
+    <!-- <ion-button (click)="setUNPROCESSED()">{{admin}}</ion-button>    -->
+
+    <ion-button *ngIf="value == 0 && admin ==1" (click)="setPROCESSING()">受理處理</ion-button>
+    <ion-button *ngIf="value == 0.5 && admin ==1" (click)="setPROCESSED()">處理完畢</ion-button>
+    <ion-button *ngIf="value ==1 && admin ==1" [disabled]="value ==1">已處理</ion-button>
+
+
+  </div>
+</ion-content>
+

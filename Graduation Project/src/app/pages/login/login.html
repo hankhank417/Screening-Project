@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="login-logo">
+    <img src="assets/img/apploginicon.png" alt="Ionic logo">
+  </div>
+  <div class="login-form">
+    <form class="form" [formGroup]="validations_form" (ngSubmit)="tryLogin(validations_form.value)">
+    
+      <ion-item>
+        <ion-icon slot="start" name="person" ></ion-icon>
+        <!-- <ion-label position="stacked" color="primary">Username</ion-label> -->
+        <ion-input clearInput  name="username" placeholder="Please enter username"  type="text" formControlName="email">
+        </ion-input>
+      </ion-item>
+
+      <div class="validation-errors">
+          <ng-container *ngFor="let validation of validation_messages.email">
+            <div class="error-message" *ngIf="validations_form.get('email').hasError(validation.type) && (validations_form.get('email').dirty || validations_form.get('email').touched)">
+              {{ validation.message }}
+            </div>
+          </ng-container>
+        </div>
+      
+
+      <ion-item>
+        <ion-icon slot="start" name="unlock" ></ion-icon>
+        <!-- <ion-label position="stacked" color="primary">Password</ion-label> -->
+        <ion-input clearInput  name="password" placeholder="Please enter password" type="password" formControlName="password">
+        </ion-input>
+      </ion-item>
+
+      <div class="validation-errors">
+          <ng-container *ngFor="let validation of validation_messages.password">
+            <div class="error-message" *ngIf="validations_form.get('password').hasError(validation.type) && (validations_form.get('password').dirty || validations_form.get('password').touched)">
+              {{ validation.message }}
+            </div>
+          </ng-container>
+        </div>
+    <p></p>
+    <p></p>
+    <ion-row>
+      
+      <ion-col>
+        <ion-button  type="submit" expand="block" [disabled]="!validations_form.valid">Login</ion-button>
+        <label class="error-message">{{errorMessage}}</label>
+      </ion-col>
+    
+      <ion-col>
+        <ion-button (click)="goSignup()"  color="light" expand="block">Signup</ion-button>
+      </ion-col>
+    </ion-row>
+  </form> 
+  </div>
+</ion-content>

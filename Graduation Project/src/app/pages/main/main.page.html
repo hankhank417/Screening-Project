@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>首頁</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div class="outer">
+  <div class="icon">
+    <img src="assets/img/apploginicon.png" class="main-img" />
+  </div>
+  <div class="inner">
+    
+    <div class="btn-content">
+      <div class="btn_left">
+          <button class="btn account" [routerLink]="['/account']" >
+              <ion-icon name="person" class="btn-icon"></ion-icon><br>
+              <ion-label>個人資訊</ion-label>
+          </button>
+      </div>
+
+      <div class="btn_right">
+          <button class="btn gps" [routerLink]="['/gps']" >
+              <ion-icon name="navigate" class="btn-icon"></ion-icon><br>
+              <ion-label>路線導航</ion-label>
+          </button>
+      </div>  
+
+      <div class="btn_right">
+          <button class="btn report" [routerLink]="['/report']" >
+              <ion-icon name="paper" class="btn-icon"></ion-icon><br>
+              <ion-label>事件回報</ion-label>
+            </button>
+      </div>
+
+      <div class="btn_left">
+          <button class="btn security" [routerLink]="['/assists']">
+              <ion-icon name="medkit" class="btn-icon"></ion-icon><br>
+              <ion-label>支援地點</ion-label>
+          </button>
+        </div>
+    </div>
+  </div>
+</div>
+</ion-content>

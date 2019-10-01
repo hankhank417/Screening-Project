@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar color="primary">
+  <ion-buttons slot="start">
+    <ion-menu-button></ion-menu-button>
+  </ion-buttons>
+  <ion-title>條款及隱私權</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item>
+    <ion-label>語言(Language)：</ion-label>
+    <ion-select  value="tw" (ionChange)="changeLang($event)">
+      <ion-select-option value="tw">繁體中文</ion-select-option>
+      <ion-select-option value="eng">English</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-grid  *ngIf="language == 'tw' " style="border: 2px #e0e0e0 solid; margin: 40px; padding: 5px; border-radius: 9%">
+    <p style="color:grey;">感謝您使用Jiagogo(以下簡稱本應用軟體)，為了讓您能夠安心使用本應用軟體的各項服務與資訊，特此向您說明本網站的隱私保護政策：</p>
+    <p style="color:#005580;">一、隱私權保護政策的適用範圍</p>
+    <p style="color:#005580;">二、個人資料的搜集及應用方式 </p>
+    <p style="color:#005580;">三、資料之保護</p>
+    <p style="color:#005580;">四、網站對外的相關連結</p>
+    <p style="color:#005580;">五、與第三人共用個人資料之政策</p>
+    <p style="color:#005580;">六、Cookie之使用</p>
+  </ion-grid>
+
+  <ion-grid  *ngIf="language == 'eng' " style="border: 2px #e0e0e0 solid; margin: 40px; padding: 5px; border-radius: 9%">
+      <p style="color:grey;">Thank you for using Jiagogo (hereinafter referred to as this application software), in order to give you peace of mind to use the services and information of this application software, hereby explain to you the privacy protection policy of this website:</p>
+      <p style="color:#005580;">1. The scope of application of the privacy protection policy</p>
+      <p style="color:#005580;">2. The collection and application of personal data </p>
+      <p style="color:#005580;">3. The protection of data</p>
+      <p style="color:#005580;">4. The website's external links</p>
+      <p style="color:#005580;">5. Policy for sharing personal data with third parties</p>
+      <p style="color:#005580;">6. The use of cookies</p>
+    </ion-grid>
+</ion-content>
+
+
+
+
+
+
+

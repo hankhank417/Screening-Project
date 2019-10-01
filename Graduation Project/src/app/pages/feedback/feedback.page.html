@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">　　
+        <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>意見回饋</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    
+
+<div class="outer">
+  <div class="icon">
+    &nbsp;感謝您使用Jiagogo!!!<br>
+    &nbsp;有任何問題歡迎回饋給我們的客服系統<br>
+    &nbsp;請詳細描述您所遇到的問題<br>
+    &nbsp;我們將有專人回覆您<br>
+  </div>
+
+  <div class="inner">
+    
+    <div class="mail-content">
+      <!-- 寄信的部分 -->
+      <ion-card>
+        <div padding>
+          <ion-item>
+            <ion-label color="primary" stacked>主旨</ion-label>
+            <ion-input [(ngModel)]="subject" type="text" placeholder="請輸入主旨"></ion-input>
+          </ion-item>
+    
+          <ion-label color="primary" stacked>內容</ion-label>
+          <ion-textarea [(ngModel)]="body" type="textarea" placeholder="請輸入內容"></ion-textarea>
+          
+            
+          <div class="button">
+            <ion-button ion-button block (click)="sendEmail()">確認送出</ion-button>
+          </div>
+        </div>
+      
+      </ion-card>
+    </div>
+  </div>
+</div>
+
+
+</ion-content>

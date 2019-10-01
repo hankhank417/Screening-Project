@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>中山大學宿服中心</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="./import/style.css">
+	<link href="https://fonts.googleapis.com/earlyaccess/cwtexfangsong.css" rel="stylesheet">
+</head>
+<body>
+	<div id="mySidenav" class="sidenav">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<a href="#">翠亨A棟</a>
+		<a href="#">翠亨B棟</a>
+		<a href="#">翠亨C棟</a>
+		<a href="#">翠亨D棟</a>
+		<a href="#">翠亨E棟</a>
+		<a href="#">翠亨F棟</a>
+		<a href="#">翠亨G棟</a>
+		<a href="#">翠亨H棟</a>
+		<a href="#">翠亨L棟</a>
+		<a href="#">武嶺一村</a>
+		<a href="#">武嶺二村</a>
+		<a href="#">武嶺三村</a>
+		<a href="#">武嶺四村</a>
+		<a href="#">國際村</a>
+	</div>
+	<div id="main">
+		<header>
+			<img class="logo" src="./pic/logo.png">
+			<div id="serviceUnits">
+				<a href="#">宿舍服務中心</a>
+				<p>Service Units</p>
+			</div>
+			<div class="search">
+				<div id="alter">
+					<a href="#"><span>加追蹤</span>Follow us</a>
+					<a href="#"><span>聯絡我們</span>Contact us</a>
+				</div>
+				<br>
+				<div id="search_form">
+					搜索
+					<input id="search_input" type="text" name="search">
+					<a id="search_area_img" href="#"><img id="search_icon" src="./icon/search.png"></a>
+				</div>
+			</div>
+		</header>
+		<div id="nav">
+			<a href="#book" data-toggle="tab"><span>我要入住!</span>Book</a>
+			<a href="#location" data-toggle="tab"><span>位置</span>Location</a>
+			<a href="#view" data-toggle="tab"><span>周遭景色</span>Around View</a>
+			<a href="#room" data-toggle="tab"><span>房間</span>Room</a>
+			<a href="#shop" data-toggle="tab"><span>福利社</span>cooperative</a>
+		</div>
+		<span style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776;宿舍一覽</span>
+		<div id="content">
+			<div class="tab-content">
+				<div role="tabpanel" class="tab-pane fade in active" id="book">
+					<div class="photo">
+						  <img class="mySlides" src="./pic/dorm1.jpg" style="width:100%">
+						  <img class="mySlides" src="./pic/dorm3.jpg" style="width:100%">
+						  <img class="mySlides" src="./pic/room2.jpg" style="width:100%">
+						  <img class="mySlides" src="./pic/dorm2.jpg" style="width:100%">
+
+						  <button onclick="plusDivs(-1)">&#10094;</button>
+						  <button onclick="plusDivs(1)">&#10095;</button>
+					</div>
+					<div class="introduction">
+						<table>
+							<tr>
+								<td>宿舍名</td>
+								<td>武嶺四村</td>
+							</tr>
+							<tr>
+								<td style="width: 150px;">租金</td>
+								<td style="width: 300px;">8500 / 半年</td>
+							</tr>
+							<tr>
+								<td>性別要求</td>
+								<td>男</td>
+							</tr>
+							<tr>
+								<td>房間格局</td>
+								<td>床位、書桌椅、書架、<br>衣櫥、冷氣、電扇</td>
+							</tr>
+							<tr>
+								<td>床位尺寸</td>
+								<td>200cm X 100cm</td>
+							</tr>
+							<tr>
+								<td>樓高</td>
+								<td>5樓</td>
+							</tr>
+						</table>
+					</div>
+					<table class="book">
+							<tr>
+								<td>姓名</td>
+								<td>學號</td>
+							</tr>
+							<tr>
+								<td><input type="text" name="" id="student_name"></td>
+								<td><input type="text" name="" id="ID"></td>
+								<td><input id="submit" type="submit" name="submit" value="申請"></td>
+							</tr>
+					</table>
+				</div>
+				<div role="tabpanel" class="tab-pane fade" id="location">
+					<img id="map" src="./pic/map.jpg">
+				</div>
+				<div role="tabpanel" class="tab-pane fade" id="view">
+					<a href="#img1"><img id="dorm" class="thumbnail" src="./pic/dorm1.jpg"></a>
+					<a href="#_" class="lightbox" id="img1"><img src="./pic/dorm1.jpg"></a>
+					<a href="#img2"><img id="dorm" class="thumbnail" src="./pic/dorm2.jpg"></a>
+					<a href="#_" class="lightbox" id="img2"><img src="./pic/dorm2.jpg"></a>
+					<a href="#img3"><img id="dorm" class="thumbnail" src="./pic/dorm3.jpg"></a>
+					<a href="#_" class="lightbox" id="img3"><img src="./pic/dorm3.jpg"></a>
+					<a href="#img5"><img id="monkey" class="thumbnail" src="./pic/monkey1.jpg"></a>
+					<a href="#_" class="lightboxMonkey" id="img5"><img src="./pic/monkey1.jpg"></a>
+					<a href="#img6"><img id="monkey" class="thumbnail" src="./pic/monkey2.jpg"></a>
+					<a href="#_" class="lightboxMonkey" id="img6"><img src="./pic/monkey2.jpg"></a>
+					<a href="#img7"><img id="monkey" class="thumbnail" src="./pic/monkey3.jpg"></a>
+					<a href="#_" class="lightboxMonkey" id="img7"><img src="./pic/monkey3.jpg"></a>
+				</div>
+				<div role="tabpanel" class="tab-pane fade" id="room">
+					<a href="#img9"><img id="dorm" class="thumbnail" src="./pic/room2.jpg"></a>
+					<a href="#_" class="lightbox" id="img9"><img src="./pic/room2.jpg"></a>
+					<a href="#img10"><img id="dorm" class="thumbnail" src="./pic/room3.jpg"></a>
+					<a href="#_" class="lightbox" id="img10"><img src="./pic/room3.jpg"></a>
+					<a href="#img11"><img id="dorm" class="thumbnail" src="./pic/room4.jpg"></a>
+					<a href="#_" class="lightbox" id="img11"><img src="./pic/room4.jpg"></a>
+					<a href="#img12"><img id="dorm" class="thumbnail" src="./pic/room1.jpg"></a>
+					<a href="#_" class="lightbox" id="img12"><img src="./pic/room1.jpg"></a>
+				</div>
+				<div role="tabpanel" class="tab-pane fade" id="shop">
+					<a href="#img13"><img id="dorm" class="thumbnail" src="./pic/shop1.jpg"></a>
+					<a href="#_" class="lightbox" id="img13"><img src="./pic/shop1.jpg"></a>
+					<a href="#img14"><img id="dorm" class="thumbnail" src="./pic/shop2.jpg"></a>
+					<a href="#_" class="lightbox" id="img14"><img src="./pic/shop2.jpg"></a>
+					<a href="#img15"><img id="dorm" class="thumbnail" src="./pic/shop3.jpg"></a>
+					<a href="#_" class="lightbox" id="img15"><img src="./pic/shop3.jpg"></a>
+					<a href="#img16"><img id="dorm" class="thumbnail" src="./pic/shop4.jpg"></a>
+					<a href="#_" class="lightbox" id="img16"><img src="./pic/shop4.jpg"></a>
+				</div>
+			</div>
+		</div>
+		<div class="detail">
+			<div class="equipment">
+				<table>
+					<tr>
+						<td colspan="2" style="width: 250px;">生活機能</td>
+						<td>備註</td>
+					</tr>
+					<tr>
+						<td style="width: 30px;"><img class="icon" src="./icon/p.jpg"></td>
+						<td>免費停車</td>
+						<td>辦車證一次 300 之車管會吸金地</td>
+					</tr>
+					<tr>
+						<td style="width: 30px;"><img class="icon" src="./icon/car.png"></td>
+						<td>專業拖車</td>
+						<td>拖吊一次付 300 之車管會錢賺飽飽</td>
+					</tr>
+					<tr>
+						<td><img class="icon" src="./icon/net.png"></td>
+						<td>免費有線網路</td>
+						<td>網路不穩還會鎖網</td>
+					</tr>
+					<tr>
+						<td><img class="icon" src="./icon/Signal.png"></td>
+						<td>基地台</td>
+						<td>住山上沒有訊號好棒棒</td>
+					</tr>
+					<tr>
+						<td><img class="icon" src="./icon/water.png"></td>
+						<td>免費飲用水</td>
+						<td>沒品住宿生泡麵渣渣不清掉</td>
+					</tr>
+					<tr>
+						<td><img class="icon" src="./icon/machine.jpg"></td>
+						<td>販賣機</td>
+						<td>94 不給你飲料</td>
+					</tr>
+					<tr>
+						<td><img class="icon" src="./icon/wc.png"></td>
+						<td>廁所</td>
+						<td>來沖沖去衝衝，上廁所不沖屎之五星級廁所</td>
+					</tr>
+					<tr>
+						<td><img class="icon" src="./icon/bath.png"></td>
+						<td>衛浴設備</td>
+						<td>浴室門鎖壞了還有人在唱歌</td>
+					</tr>
+					<tr>
+						<td><img class="icon" src="./icon/clean.png"></td>
+						<td>專業打掃人員</td>
+						<td>阿姨四點起床打掃好辛苦</td>
+					</tr>
+					<tr>
+						<td><img class="icon" src="./icon/eat.png"></td>
+						<td>鄰近餐廳</td>
+						<td>林媽媽白米飯吃到飽</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+		
+	
+	<script type="text/javascript" src="./import/javascript.js"></script>
+	<script src="./import/jquery-1.11.2.min.js"></script>
+	<script src="./import/bootstrap.min.js"></script>
+</body>
+</html>

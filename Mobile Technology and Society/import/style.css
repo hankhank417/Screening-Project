@@ -1,0 +1,281 @@
+@font-face {
+  font-family: 'Marck_Script';
+  font-style: normal;
+  src: url(../fonts/Marck_Script/MarckScript-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: '兒風體W3';
+  font-style: normal;
+  src: url(../fonts/兒風體W3/兒風體W3.ttc) format('truetype');
+}
+body{
+	background-image: url('../pic/bg.jpg');
+	background-repeat: no-repeat;
+	-moz-background-size: cover;
+	   background-size: cover;
+	background-position: center bottom;
+
+	font-family: "Marck_Script" , "兒風體W3", "cwtexfangsong";
+	font-size: 26px;
+}
+a{
+	color: #000;
+	text-decoration: none;
+}
+
+			/* ---------------------------------------------------- sidebar ------------------------------------------------  */
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 6px;
+    font-size: 40px;
+    margin-left: 50px;
+}
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+			/* ---------------------------------------------------- Header ------------------------------------------------  */
+
+header{
+	width: 100%;
+	height: 110px;
+}
+.logo{
+	width: 15%;
+	padding: 10px;
+	margin-left: 30px;
+	float: left;
+}
+#serviceUnits{
+	float: left;
+}
+#serviceUnits a{
+	margin-top: 25px;
+	float: left;
+	font-size: 28px;
+}
+#serviceUnits p{
+	font-size: 20px;
+}
+.search{
+	padding-top: 10px;
+	margin-right: 40px;
+	float: right;
+}
+#alter{
+	height:25px;
+	line-height:25px;
+	overflow:hidden;
+	margin-left: 80px;
+}
+#alter a{
+	float:left;
+	width: 130px;
+}
+#alter a:hover{
+ 	padding-top:23px;
+}
+#alter span{
+	display:block;
+	margin-top:-21px;
+}
+#search_form{
+	position: relative;
+	top: -24px;
+	height: 23px;
+	margin-left: 80px;
+}
+input{
+	height: 23px;
+	border-radius: .5em;
+}
+#search_icon{
+	position: relative;
+	top: 6px;
+	height: 23px;
+}
+
+			/* ---------------------------------------------------- nav ------------------------------------------------  */
+
+#nav{
+	text-align: center;
+	height:30px;
+	line-height:30px;
+	overflow:hidden;
+	margin-left: 17%;
+	font-size: 33px;
+}
+#nav a{
+	border-right: 1px solid;
+	border-left: 1px solid;
+	float:left;
+	width: 200px;
+}
+#nav a:hover{
+ 	padding-top: 30px;
+}
+#nav span{
+	display:block;
+	margin-top:-28px;
+}
+
+			/* ---------------------------------------------------- content ------------------------------------------------  */
+
+#content{
+	margin-right: auto;
+	margin-left: auto;
+	width: 60%;
+	margin-top: 30px;
+	position: relative;
+	height: 450px;
+}
+.tab-content>.tab-pane{
+	display:none;
+	visibility:hidden;
+}
+.tab-content>.active{display:block;
+	visibility:
+	visible;
+}
+.fade{
+	opacity:0;
+	-webkit-transition:opacity .15s linear;
+		 -o-transition:opacity .15s linear;
+			transition:opacity .15s linear;
+}
+.fade.in{opacity:1}
+
+			/* ----------------------------------------------------   book  ------------------------------------------------- */
+
+.photo{
+	width: 35%;
+	text-align: center;
+	float: left;
+}
+.photo img{
+	border-radius: .7em;
+}
+.introduction table{
+	font-size: 30px;
+	padding: 30px;
+}
+.book{
+	padding: 13px 30px 30px 30px;
+}
+#submit{
+	margin-left: 30px;
+	font-size: 20px;
+	border-radius: .6em;
+	height: 32px;
+}
+
+		/* ----------------------------------------------------   location  ------------------------------------------------- */
+
+#map{
+	margin-left: 25%;
+	width: 50%;
+}
+
+		/* ----------------------------------------------------   view  ------------------------------------------------- */
+
+.thumbnail {
+	border-radius: 1.5em;
+	width: 5.9em;
+	padding: .7em 1em;
+}
+.lightbox {
+	display: none;
+	position: fixed;
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+}
+.lightbox img {
+	border-radius: 1.5em;
+	max-width: 90%;
+	max-height: 80%;
+	margin-top: 5%;
+}
+.lightbox:target {
+	outline: none;
+	display: block;
+}
+#dorm{
+	margin: 10px;
+	width: 20%;
+}
+#monkey{
+	width: 20%;
+	margin: 10px;
+	transform: rotate(90deg);
+}
+.lightboxMonkey{
+	display: none;
+	position: fixed;
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+}
+.lightboxMonkey img {
+	border-radius: 1.5em;
+	max-width: 90%;
+	max-height: 65%;
+	margin-top: 9%;
+	transform: rotate(90deg);
+}
+.lightboxMonkey:target {
+	outline: none;
+	display: block;
+}
+
+			/* ---------------------------------------------------- detail ------------------------------------------------  */
+
+.equipment{
+	width: 60%;
+	margin-top: 30px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.equipment table{
+	padding: 30px;
+}
+.icon{
+	width: 30px;
+}
